@@ -9,9 +9,8 @@ RUN chmod -R a+w /var/cache/nginx/ \
         && chmod a+w /var/run/nginx.pid \
         && rm /etc/nginx/conf.d/*
 
-COPY hello.conf /etc/nginx/conf.d/
-COPY index.html /usr/share/nginx/html/
+COPY *.conf /etc/nginx/conf.d/
 COPY main.css /usr/share/nginx/html/
-COPY about.html /usr/share/nginx/html/
+COPY *.html /usr/share/nginx/html/
 EXPOSE 80
 USER nginx
