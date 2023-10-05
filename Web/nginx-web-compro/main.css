@@ -92,22 +92,6 @@ ul {
   justify-content: space-between;
 }
 
-.header .container .kotak-1 {
-    flex-grow: 1;
-    order: 1;
-}
-
-.header .container .kotak-2 {
-    flex-grow: 1;
-    order: 2;
-    border: 2px solid #999;
-    border-radius: 10px;
-    margin: 20px 10px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-    padding: 15px 20px;
-    background-color: #333;
-}
-
 .boxes .container {
   display: flex;
   justify-content: space-between;
