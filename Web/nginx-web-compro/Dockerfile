@@ -1,4 +1,5 @@
-FROM nginx:mainline-alpine
+#FROM nginx:mainline-alpine
+FROM nginx:mainline-alpine3.18-slim
 
 MAINTAINER zikrillah
 
