@@ -8,11 +8,11 @@ COPY src /usr/share/nginx/html
 
 RUN apk update && apk upgrade
 RUN apk add bash
-RUN apk add php8 php8-fpm php8-opcache
-RUN apk add php8-gd php8-zlib php8-curl php8-session
+RUN apk add php82 php82-fpm php82-opcache
+RUN apk add php82-gd php82-zlib php82-curl php82-session
 
-COPY server/etc/php /etc/php8
+COPY server/etc/php /etc/php82
 
 RUN mkdir /var/run/php
 STOPSIGNAL SIGTERM
-CMD ["/bin/bash", "-c", "php-fpm8 && chmod 777 /var/run/php/php8-fpm.sock && chmod 755 /usr/share/nginx/html/* && nginx -g 'daemon off;'"]
+CMD ["/bin/bash", "-c", "php-fpm82 && chmod 777 /var/run/php/php82-fpm.sock && chmod 755 /usr/share/nginx/html/* && nginx -g 'daemon off;'"]
